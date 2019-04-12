@@ -1,0 +1,10 @@
+
+[2019-04-08 21:41:35] [2] ERROR/DEBUG: Invalid error type specified on line 61 in file "/var/www/vktest/htdocs/Logger/examples/TestLogger.php" by url "/Logger/examples/TestLogger.php" 
+
+[2019-04-08 21:44:19] [2] ERROR/DEBUG: Invalid error type specified on line 61 in file "/var/www/vktest/htdocs/Logger/examples/TestLogger.php" by url "/Logger/examples/TestLogger.php" 
+
+[2019-04-08 21:47:53] [2] ERROR/DEBUG: Invalid error type specified on line 61 in file "/var/www/vktest/htdocs/Logger/examples/TestLogger.php" by url "/Logger/examples/TestLogger.php" 
+
+[2019-04-08 21:49:08] [2] ERROR/DEBUG: Invalid error type specified on line 61 in file "/var/www/vktest/htdocs/Logger/examples/TestLogger.php" by url "/Logger/examples/TestLogger.php" 
+
+[2019-04-08 21:51:24] [2] ERROR/DEBUG: Invalid error type specified on line 61 in file "/var/www/vktest/htdocs/Logger/examples/TestLogger.php" by url "/Logger/examples/TestLogger.php" 

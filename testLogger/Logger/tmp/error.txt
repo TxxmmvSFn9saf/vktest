@@ -1,0 +1,169 @@
+
+[2018-12-06 09:56:16] error
+[2018-12-06 09:57:10] error
+[2018-12-06 09:58:56] error
+[2018-12-06 10:00:27] error
+[2018-12-06 10:01:05] error
+[2018-12-06 10:01:27] error
+[2018-12-06 10:01:41] error
+[2018-12-06 10:01:59] error
+[2018-12-06 10:02:20] error
+[2018-12-06 10:05:56] error
+[2018-12-06 10:05:57] error
+[2018-12-06 12:15:11] error
+[2018-12-06 12:15:27] error
+[2018-12-06 12:15:28] error
+[2018-12-06 12:15:57] error
+[2018-12-06 12:16:19] error
+[2018-12-06 12:17:13] error
+[2018-12-06 12:18:30] error
+[2018-12-06 12:18:49] error
+[2018-12-06 12:19:05] error
+[2018-12-06 12:19:35] error
+[2018-12-06 12:20:42] error
+[2018-12-06 12:21:29] error
+[2018-12-06 12:23:31] error
+[2018-12-06 12:23:52] error
+[2018-12-06 12:24:03] error
+[2018-12-06 12:24:30] error
+[2018-12-06 12:25:24] error
+[2018-12-06 12:25:59] error
+[2018-12-06 12:27:55] error
+[2018-12-06 12:28:07] error
+[2018-12-06 12:28:08] error
+[2018-12-06 12:29:34] error
+[2018-12-06 12:30:16] error
+[2018-12-06 12:30:30] error
+[2018-12-06 12:32:09] error
+[2018-12-06 12:32:17] error
+[2018-12-06 12:32:18] error
+[2018-12-06 12:32:47] error
+[2018-12-06 12:33:08] error
+[2018-12-06 12:34:32] error
+[2018-12-06 12:34:33] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:34:33] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:34:33] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:34:33] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:10] error
+[2018-12-06 12:35:10] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:10] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:10] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:10] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:21] error
+[2018-12-06 12:35:21] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:21] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:21] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:21] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:21] error
+[2018-12-06 12:35:22] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:22] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:22] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:35:22] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:32] error
+[2018-12-06 12:36:33] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:33] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:33] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:33] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:44] error
+[2018-12-06 12:36:45] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:45] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:45] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:45] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:49] error
+[2018-12-06 12:36:50] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:50] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:50] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:36:50] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:27] error
+[2018-12-06 12:37:27] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:27] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:27] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:27] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:34] error
+[2018-12-06 12:37:34] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:34] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:34] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:34] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:52] error
+[2018-12-06 12:37:52] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:52] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:52] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:37:52] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:39:10] error
+[2018-12-06 12:39:11] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:39:11] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:40:26] error
+[2018-12-06 12:40:27] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:40:27] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:40:36] error
+[2018-12-06 12:40:37] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:40:37] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:40:37] error
+[2018-12-06 12:40:37] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:40:37] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:40:44] error
+[2018-12-06 12:40:45] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:40:45] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:41:10] error
+[2018-12-06 12:41:10] [2] ERROR: Error on line 56 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:41:10] [2] ERROR: Error on line 57 in file "C:\OSPanel\domains\test\testLogger\Logger\src\XMLLogger.php" by url "/testLogger/Logger/examples/TestLogger.php" 
+
+[2018-12-06 12:42:26] error
+[2018-12-06 12:43:33] error
+[2018-12-06 12:43:42] error
+[2018-12-06 12:43:48] error
+[2018-12-06 12:44:03] error
+[2018-12-06 12:44:23] error
+[2018-12-06 12:44:29] error
+[2018-12-06 12:45:32] error

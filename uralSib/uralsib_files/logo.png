@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="oldie" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>ВК Комфорт</title>
+	<link rel="stylesheet" media="all" href="http://vk.loc/assets/css/jquery.selectBoxIt.css">
+	<link rel="stylesheet" media="all" href="http://vk.loc/assets/css/style.css">
+	<link rel="stylesheet" media="all" href="http://vk.loc/assets/css/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" media="all" href="http://vk.loc/assets/css/queries.css">
+	<link rel="stylesheet" media="all" href="http://vk.loc/assets/css/forms.css">
+	<link rel="stylesheet" media="all" href="http://vk.loc/assets/css/mmap.css">
+
+	<link rel="stylesheet" media="all" href="http://vk.loc/assets/css/pay.css">
+
+	<link href='http://vk.loc//assets/js/backstage/vendor/chosen/chosen.min.css' rel='stylesheet' />
+	<link href='http://vk.loc//assets/js/backstage/vendor/chosen/chosen-correct.css' rel='stylesheet' />
+
+
+
+	<link href='http://vk.loc/assets/js/Remodal/src/remodal.css' rel='stylesheet' />
+	<link href='http://vk.loc/assets/js/Remodal/src/remodal-default-theme.css' rel='stylesheet' />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="http://vk.loc/assets/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://vk.loc/assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://vk.loc/assets/js/jquery.bxslider.js"></script>
+	<script type="text/javascript" src="http://vk.loc/assets/js/jquery.selectBoxIt.js"></script>
+	<script type="text/javascript" src="http://vk.loc/assets/js/main.js"></script>
+
+	<script type="text/javascript" src="http://vk.loc/assets/js/Remodal/src/remodal.js"></script>
+	<script type="text/javascript" src="http://vk.loc/assets/js/jquery.matchHeight.js"></script>
+
+	<script type="text/javascript" src="/assets/js/slick-1.8.1/slick/slick.min.js"></script>
+	<link rel="stylesheet" media="all" href="/assets/js/slick-1.8.1/slick/slick.css">
+	<link rel="stylesheet" media="all" href="/assets/js/slick-1.8.1/slick/slick-theme.css">
+
+	
+	
+	<meta name='yandex-verification' content='7e9eba6c06cfc5c4' />
+	<meta name='verify-v1' content='PorBrDo9WOryU2yFkhHGqCzlBhmE-1PccnZTWO_JlU4' />
+
+</head>
+<body>
+
+<div class="remodal" data-remodal-id="modal" data-remodal-options="closeOnOutsideClick: false" style="width: 500px">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h5 id="paymoWinTitle"></h5>
+  <div id="paymoWin">
+        <form id="paymoForm" action="">
+		<div style="width: 100%; text-align: center;">
+		<div id="paymoWinFormTitle">Оплатить ЖКУ</div>
+		</div>
+		<br><br>
+		<div>
+		<input name="account" placeholder="Лицевой счет" value="" autocomplete="off" style="border-radius: 10px;" type="text">
+		<br>
+		<input name="amount" placeholder="0.00" autocomplete="off" style="border-radius: 10px;" type="text">
+		<br>
+		<input name="email" placeholder="Email" autocomplete="off" style="border-radius: 10px;" type="text">
+		<br>
+		<input name="ins" type="checkbox" checked id="ins"><label for="ins">Со страховкой</label>
+		<br /><br />
+
+		<div>С учетом комиссии: <span id="paymoWinTotal">0.00</span> руб.</div>
+		<br>
+		<br>
+		<input data-action="openPaymo" id="paymoWinBtn" value="Оплатить" type="submit">
+		</div>
+		</div>
+		</form>
+
+		<div id="paymoFrame"></div>
+
+
+		<div style="padding-top: 20px; padding-bottom: 10px;">
+			<i>Оплата производится при помощи платежного сервиса <a href="https://paymo.ru/" target="blank">PAYMO</a></i><br /><br />
+			<strong>Комиссия - 1%</strong>
+		</div>
+</div>
+
+<script src="https://paymo.ru/paymentgate/iframe/checkout.js"></script>
+<script src="/assets/js/jquery-maskedinput/jquery-maskedinput.js"></script>
+<script src="/assets/js/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/assets/js/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="/assets/js/jquery-validation/dist/localization/messages_ru.min.js"></script>
+<script src="/assets/js/pay.js"></script>
+
+<div class="wrapper">
+
+	<header id="header">
+		<div class="header_box">
+			<div class="container">
+
+				<a href="http://vk.loc/" id="logo" title="ВК Комфорт">ВК Комфорт</a>
+
+				<h1 class="slogan">надежно . справедливо . открыто</h1>
+
+				<form action="http://vk.loc/search/" method="get" class="search">
+					<input type="search" name="search" placeholder="Я ищу...">
+					<input type="submit">
+				</form>
+
+				<div class="header_phone">
+					<strong><span>8 (495)</span> 737-77-40</strong>
+					<span class="h24">круглосуточно</span>
+				</div>
+
+				<a href="" id="modalPaymoOpener" class="interview_link interview_link2">Оплата ЖКУ</a>
+
+
+				<a href="https://room.vkcomfort.ru" class="interview_link">Вход в Личный кабинет</a>
+		</div>
+		</div>
+		<nav id="menu">
+
+			<a href="#" class="mobile_menu_button"></a>
+
+			<ul>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/компания/">Компания</a>
+										<ul>
+												<li><a href="http://vk.loc/компания/контакты/">Контакты</a></li>
+												<li><a href="http://vk.loc/компания/О компании/">О Компании</a></li>
+												<li><a href="http://vk.loc/компания/Деятельность/">Деятельность</a></li>
+												<li><a href="http://vk.loc/компания/команда/">Команда</a></li>
+												<li><a href="http://vk.loc/компания/управмкд/">Участие в управлении многоквартирным домом</a></li>
+												<li><a href="http://vk.loc/компания/Лицензии/">Лицензии</a></li>
+												<li><a href="http://vk.loc/компания/раскрытие-информации/">Раскрытие информации</a></li>
+												<li><a href="http://vk.loc/компания/вакансии/">Вакансии</a></li>
+												<li><a href="http://vk.loc/компания/партнеры/">Партнеры</a></li>
+												<li><a href="http://vk.loc/компания/нормативныедокументы/">Нормативные документы ЖКХ</a></li>
+												<li><a href="http://vk.loc/компания/оцените-нас/">Оцените нас</a></li>
+											</ul>
+								</li>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/услуги/">Мастер на все руки</a>
+										<ul>
+												<li><a href="http://vk.loc/услуги/видеодомофон/">Видеодомофоны</a></li>
+												<li><a href="http://vk.loc/услуги/замена-счетчиков-водоснабжения/">Замена счетчиков водоснабжения</a></li>
+												<li><a href="http://vk.loc/услуги/ремонтно-строительныеработы/">Ремонтно-строительные работы</a></li>
+												<li><a href="http://vk.loc/услуги/сантехническиеработы/">Сантехнические работы</a></li>
+												<li><a href="http://vk.loc/услуги/сопутствующиеуслуги/">Сопутствующие услуги</a></li>
+												<li><a href="http://vk.loc/услуги/телекоммуникационныеработы/">Телекоммуникационные работы</a></li>
+												<li><a href="http://vk.loc/услуги/тоис/">Техническое обслуживание инженерных систем квартир</a></li>
+												<li><a href="http://vk.loc/услуги/Услугипотехобслуживаниюприборовучетарасходаводы/">Услуги по техническому обслуживанию приборов учета расхода воды</a></li>
+												<li><a href="http://vk.loc/услуги/электромонтажныеработы/">Электромонтажные работы</a></li>
+											</ul>
+								</li>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/кл/">Клуб лояльности</a>
+										<ul>
+												<li><a href="http://vk.loc/кл/бытовые-услуги/">Бытовые услуги</a></li>
+												<li><a href="http://vk.loc/кл/win/">Отделка балконов и лоджий</a></li>
+												<li><a href="http://vk.loc/кл/furn/">Кухни и любая мебель на заказ</a></li>
+												<li><a href="http://vk.loc/кл/Арендамашиномест/">Аренда машиномест</a></li>
+												<li><a href="http://vk.loc/кл/ответственноехранение/">Ответственное хранение</a></li>
+												<li><a href="http://vk.loc/кл/охранная-сигнализация/">Охранные сигнализации</a></li>
+												<li><a href="http://vk.loc/кл/переезд/">Переезд</a></li>
+												<li><a href="http://vk.loc/кл/арендаквартир/">Продажа и аренда квартир от собственников</a></li>
+												<li><a href="http://vk.loc/кл/рекламныеуслуги/">Рекламные услуги</a></li>
+												<li><a href="http://vk.loc/кл/ремонт-квартир/">Ремонт квартир</a></li>
+												<li><a href="http://vk.loc/кл/strahovka/">Добровольное страхование квартиры и гражданской ответственности</a></li>
+												<li><a href="http://vk.loc/кл/управление-новыми-объектами/">Управление новыми объектами недвижимости</a></li>
+												<li><a href="http://vk.loc/кл/Установкакондиционеров/">Установка кондиционеров</a></li>
+												<li><a href="http://vk.loc/кл/inservice/">Услуги страхования</a></li>
+												<li><a href="http://vk.loc/кл/окна-калева/">Установка окон</a></li>
+												<li><a href="http://vk.loc/кл/Установкарадиаторовотопления/">Установка радиаторов отопления</a></li>
+												<li><a href="http://vk.loc/кл/подбор-персонала/">Услуга по подбору персонала</a></li>
+											</ul>
+								</li>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/объекты/">Объекты</a>
+										<ul>
+												<li><a href="http://vk.loc/объекты/базовская/">Базовская</a></li>
+												<li><a href="http://vk.loc/объекты/бескудниково/">Бескудниково</a></li>
+												<li><a href="http://vk.loc/объекты/вершинино/">Вершинино</a></li>
+												<li><a href="http://vk.loc/объекты/dnrv/">Дом на Рогожском Валу</a></li>
+												<li><a href="http://vk.loc/объекты/Головино/">Головино</a></li>
+												<li><a href="http://vk.loc/объекты/зеленоград/">Зеленоград</a></li>
+												<li><a href="http://vk.loc/объекты/Марфино/">Марфино</a></li>
+												<li><a href="http://vk.loc/объекты/марьинароща/">Марьина Роща</a></li>
+												<li><a href="http://vk.loc/объекты/мичурино/">Мичурино</a></li>
+												<li><a href="http://vk.loc/объекты/Нахимово/">Нахимово</a></li>
+												<li><a href="http://vk.loc/объекты/некрасовка/">Некрасовка</a></li>
+												<li><a href="http://vk.loc/объекты/новоебутово/">Новое Бутово</a></li>
+												<li><a href="http://vk.loc/объекты/одинбург/">Одинбург</a></li>
+												<li><a href="http://vk.loc/объекты/Северный_Парк/">Северный Парк</a></li>
+												<li><a href="http://vk.loc/объекты/stereos/">Стереос</a></li>
+												<li><a href="http://vk.loc/объекты/Юрлово/">Юрлово</a></li>
+												<li><a href="http://vk.loc/объекты/Чайка/">Клиника Чайка</a></li>
+												<li><a href="http://vk.loc/объекты/Калитниковская/">Б. Калитниковская ул., 42А</a></li>
+												<li><a href="http://vk.loc/объекты/Сосинская/">Сосинская улица, 6</a></li>
+												<li><a href="http://vk.loc/объекты/Нижегородская/">Нижегородская, 11А</a></li>
+												<li><a href="http://vk.loc/объекты/Пресненский/">Пресненский вал, 14, к. 1</a></li>
+											</ul>
+								</li>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/информация-по-жку/">Информация по ЖКУ</a>
+										<ul>
+												<li><a href="http://vk.loc/информация-по-жку/способыоплаты/">Способы оплаты ЖКУ</a></li>
+												<li><a href="http://vk.loc/информация-по-жку/вопрос/">Вопросы - ответы</a></li>
+												<li><a href="http://vk.loc/информация-по-жку/онлайнзаявканадокерц/">Онлайн заявка на документы Единого расчетного центра</a></li>
+												<li><a href="http://vk.loc/информация-по-жку/tariff_com/">Тарифы на коммунальные услуги</a></li>
+												<li><a href="http://vk.loc/информация-по-жку/capital/">Капитальный ремонт</a></li>
+												<li><a href="http://vk.loc/информация-по-жку/прием-показаний-по-воде/">Приём показаний счётчиков водоснабжения</a></li>
+											</ul>
+								</li>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/контакты/">Контакты</a>
+									</li>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/долги-жку/">Долги ЖКУ</a>
+										<ul>
+												<li><a href="http://vk.loc/долги-жку/должники/">Должники</a></li>
+												<li><a href="http://vk.loc/долги-жку/иски/">Иски</a></li>
+												<li><a href="http://vk.loc/долги-жку/исполнительные-производства/">Исполнительные производства</a></li>
+												<li><a href="http://vk.loc/долги-жку/списки-на-отключение/">Списки на отключение</a></li>
+											</ul>
+								</li>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/обратная-связь/">Обратная связь</a>
+										<ul>
+												<li><a href="http://vk.loc/обратная-связь/благодарственные-письма/">Награды и благодарности</a></li>
+												<li><a href="http://vk.loc/обратная-связь/Форумы жителей/">Форумы жителей</a></li>
+												<li><a href="http://vk.loc/обратная-связь/Оформлениезаявок/">Оформление заявок</a></li>
+												<li><a href="http://vk.loc/обратная-связь/опросник-старшие-по-подъездам/">Опросник старших по подъездам</a></li>
+												<li><a href="http://vk.loc/обратная-связь/_gazeta/">Газета  «Соседи»</a></li>
+												<li><a href="http://vk.loc/обратная-связь/пресса/">Пресса о нас</a></li>
+											</ul>
+								</li>
+								<li>
+					<a href="" class="submenu_trigger_mobile"></a>
+					<a href="http://vk.loc/новый-личный-кабинет/">Личный кабинет</a>
+										<ul>
+												<li><a href="http://vk.loc/новый-личный-кабинет/lk/">Личный кабинет пользователя</a></li>
+												<li><a href="http://vk.loc/новый-личный-кабинет/мп/">мобильное приложение</a></li>
+											</ul>
+								</li>
+				
+
+			</ul>
+
+		</nav><!--/navigation-->
+			</header><!--/header-->
+	<div id="body" class="inner">
+		<div class="container">
+
+			<aside id="sidebar_left">
+
+								<div class="sidebar_map_container">
+					<div class="michurino_map_box">
+	<div style="position: relative; top: -10px;">
+	М О П
+	</div>
+    <img src="http://vk.loc/assets/images/pic_michurino_map_2.png" width="260" alt="">
+        <a href="http://vk.loc/объекты/dsadsa/" onmouseout="javascript: hideObject(39);" onmouseover="javascript: showObject(39);"
+    	class="map_marker marker_39" title="dsadsadsa">
+    	<span>dsadsadsa</span>
+    </a>
+        <a href="http://vk.loc/объекты/алексеево/" onmouseout="javascript: hideObject(3);" onmouseover="javascript: showObject(3);"
+    	class="map_marker marker_3" title="Алексеево">А
+    	<span>Алексеево</span>
+    </a>
+        <a href="http://vk.loc/объекты/базовская/" onmouseout="javascript: hideObject(21);" onmouseover="javascript: showObject(21);"
+    	class="map_marker marker_21" title="Базовская">Б
+    	<span>Базовская</span>
+    </a>
+        <a href="http://vk.loc/объекты/бескудниково/" onmouseout="javascript: hideObject(23);" onmouseover="javascript: showObject(23);"
+    	class="map_marker marker_23" title="Бескудниково">Б
+    	<span>Бескудниково</span>
+    </a>
+        <a href="http://vk.loc/объекты/вершинино/" onmouseout="javascript: hideObject(22);" onmouseover="javascript: showObject(22);"
+    	class="map_marker marker_22" title="Вершинино">В
+    	<span>Вершинино</span>
+    </a>
+        <a href="http://vk.loc/объекты/головино/" onmouseout="javascript: hideObject(7);" onmouseover="javascript: showObject(7);"
+    	class="map_marker marker_7" title="Головино">Г
+    	<span>Головино</span>
+    </a>
+        <a href="http://vk.loc/объекты/dnrv/" onmouseout="javascript: hideObject(32);" onmouseover="javascript: showObject(32);"
+    	class="map_marker marker_32" title="Дом на Рогожском Валу">Р
+    	<span>Дом на Рогожском Валу</span>
+    </a>
+        <a href="http://vk.loc/объекты/зеленоград/" onmouseout="javascript: hideObject(29);" onmouseover="javascript: showObject(29);"
+    	class="map_marker marker_29" title="Зеленоград">З
+    	<span>Зеленоград</span>
+    </a>
+        <a href="http://vk.loc/объекты/марфино/" onmouseout="javascript: hideObject(1);" onmouseover="javascript: showObject(1);"
+    	class="map_marker marker_1" title="Марфино">М
+    	<span>Марфино</span>
+    </a>
+        <a href="http://vk.loc/объекты/марьинароща/" onmouseout="javascript: hideObject(24);" onmouseover="javascript: showObject(24);"
+    	class="map_marker marker_24" title="Марьина Роща">М
+    	<span>Марьина Роща</span>
+    </a>
+        <a href="http://vk.loc/объекты/мичурино/" onmouseout="javascript: hideObject(6);" onmouseover="javascript: showObject(6);"
+    	class="map_marker marker_6" title="Мичурино">М
+    	<span>Мичурино</span>
+    </a>
+        <a href="http://vk.loc/объекты/нахимово/" onmouseout="javascript: hideObject(4);" onmouseover="javascript: showObject(4);"
+    	class="map_marker marker_4" title="Нахимово">Н
+    	<span>Нахимово</span>
+    </a>
+        <a href="http://vk.loc/объекты/некрасовка/" onmouseout="javascript: hideObject(18);" onmouseover="javascript: showObject(18);"
+    	class="map_marker marker_18" title="Некрасовка">Н
+    	<span>Некрасовка</span>
+    </a>
+        <a href="http://vk.loc/объекты/новоебутово/" onmouseout="javascript: hideObject(17);" onmouseover="javascript: showObject(17);"
+    	class="map_marker marker_17" title="Новое Бутово">Б
+    	<span>Новое Бутово</span>
+    </a>
+        <a href="http://vk.loc/объекты/одинбург/" onmouseout="javascript: hideObject(28);" onmouseover="javascript: showObject(28);"
+    	class="map_marker marker_28" title="Одинбург">О
+    	<span>Одинбург</span>
+    </a>
+        <a href="http://vk.loc/объекты/Северный_Парк/" onmouseout="javascript: hideObject(31);" onmouseover="javascript: showObject(31);"
+    	class="map_marker marker_31" title="Северный Парк">C
+    	<span>Северный Парк</span>
+    </a>
+        <a href="http://vk.loc/объекты/stereos/" onmouseout="javascript: hideObject(33);" onmouseover="javascript: showObject(33);"
+    	class="map_marker marker_33" title="Стереос">C
+    	<span>Стереос</span>
+    </a>
+        <a href="http://vk.loc/объекты/юрлово/" onmouseout="javascript: hideObject(5);" onmouseover="javascript: showObject(5);"
+    	class="map_marker marker_5" title="Юрлово">Ю
+    	<span>Юрлово</span>
+    </a>
+        <a href="http://vk.loc/объекты/Чайка/" onmouseout="javascript: hideObject(26);" onmouseover="javascript: showObject(26);"
+    	class="map_marker marker_26" title="Клиника Чайка">Ч
+    	<span>Клиника Чайка</span>
+    </a>
+        <a href="http://vk.loc/объекты/калитниковская/" onmouseout="javascript: hideObject(34);" onmouseover="javascript: showObject(34);"
+    	class="map_marker marker_34" title="Б. Калитниковская ул., 42А">К
+    	<span>Б. Калитниковская ул., 42А</span>
+    </a>
+        <a href="http://vk.loc/объекты/сосинская/" onmouseout="javascript: hideObject(35);" onmouseover="javascript: showObject(35);"
+    	class="map_marker marker_35" title="Сосинская улица, 6">С
+    	<span>Сосинская улица, 6</span>
+    </a>
+        <a href="http://vk.loc/объекты/нижегородская/" onmouseout="javascript: hideObject(36);" onmouseover="javascript: showObject(36);"
+    	class="map_marker marker_36" title="Нижегородская, 11А">Н
+    	<span>Нижегородская, 11А</span>
+    </a>
+        <a href="http://vk.loc/объекты/Пресненский/" onmouseout="javascript: hideObject(37);" onmouseover="javascript: showObject(37);"
+    	class="map_marker marker_37" title="Пресненский вал, 14, к. 1">П
+    	<span>Пресненский вал, 14, к. 1</span>
+    </a>
+    </div>
+				</div>
+
+
+
+			</aside>
+
+			<div id="content"class="no_right_sidebar">
+				<div class="entry">
+										
+					
+					
+					
+					
+					
+					
+				</div>
+			</div><!--/#content-->
+
+
+
+		</div><!--/container-->
+	</div><!--/#body-->
+
+<div class="footer_contact_box">
+		<div class="container">
+		<a name="send"></a>
+			<form action="http://vk.loc/контакты/" method="post" class="footer_contact_form" style="margin-right: 40px;">
+				<div class="row">
+					<h3>Написать сообщение</h3>
+				</div>
+
+				<div class="row">
+					<div class="category_and_adress2">
+						<div class="custom_select_1">
+							<select name="theme" id="messageSelectTheme">
+								<option selected disable>Выберите тему</option>
+																	<option value="9"  id="theme-9">Коммерческие предложения
+
+
+
+
+
+
+</option>
+																	<option value="1"  id="theme-1">Финасовые вопросы</option>
+																	<option value="2"  id="theme-2">Качество обслуживания
+
+
+</option>
+																	<option value="3"  id="theme-3">Вопросы по эксплуатации
+
+
+
+</option>
+																	<option value="4"  id="theme-4">Вопросы по договорам
+
+</option>
+																	<option value="5"  id="theme-5">Безопасность
+
+
+</option>
+																	<option value="6"  id="theme-6">Техническая поддержка сайта, личного кабинета и мобильного приложения
+</option>
+																	<option value="7"  id="theme-7">Собрания собственников
+</option>
+																	<option value="8"  id="theme-8">Заявки на управление новыми объектами
+</option>
+															</select>
+						</div>
+						<div class="custom_select_1" id="m1">
+							<select name="subject" id="messageSelectSubject">
+								<option selected value="">Выберите вопрос</option>
+
+							</select>
+						</div>
+				</div>
+				</div>
+
+				<div class="row">
+					<div class="category_and_adress">
+						<div class="custom_select_1">
+							<select name="object" id="messageSelectObject">
+								<option selected disabled>Выберите ЖК</option>
+																<option value="39">dsadsadsa</option>
+																<option value="3">Алексеево</option>
+																<option value="21">Базовская</option>
+																<option value="23">Бескудниково</option>
+																<option value="22">Вершинино</option>
+																<option value="7">Головино</option>
+																<option value="32">Дом на Рогожском Валу</option>
+																<option value="29">Зеленоград</option>
+																<option value="1">Марфино</option>
+																<option value="24">Марьина Роща</option>
+																<option value="6">Мичурино</option>
+																<option value="4">Нахимово</option>
+																<option value="18">Некрасовка</option>
+																<option value="17">Новое Бутово</option>
+																<option value="28">Одинбург</option>
+																<option value="31">Северный Парк</option>
+																<option value="33">Стереос</option>
+																<option value="5">Юрлово</option>
+																<option value="26">Клиника Чайка</option>
+																<option value="34">Б. Калитниковская ул., 42А</option>
+																<option value="35">Сосинская улица, 6</option>
+																<option value="36">Нижегородская, 11А</option>
+																<option value="37">Пресненский вал, 14, к. 1</option>
+															</select>
+						</div><!--/custom_select_1-->
+						<div class="custom_select_1" id="m1">
+							<select name="address" id="messageSelectAddress">
+								<option selected value="">Выберите адрес</option>
+
+							</select>
+						</div><!--/custom_select_1-->
+					</div>
+				</div>
+				<div class="row">
+
+						<label>Номер квартиры\помещения</label>
+						<input type="text" name="address2" value="">
+
+				</div>
+				<div class="row">
+					<div class="contact_name">
+						<label>фио</label>
+						<input type="text" name="name" value="">
+					</div>
+					<div class="contact_email">
+						<label>e-mail</label>
+						<input type="email" name="email" value="">
+					</div>
+				</div>
+				<div class="row">
+					<label>напишите ваше сообщение</label>
+					<textarea name="text" id="textarea"></textarea>
+				</div>
+
+				<input type="submit" value="отправить">
+				<br />
+				<div style="">
+				<i>
+				<input type="checkbox" name="agree" id="agree">
+				<label for="agree" style="font-size: 14px; text-transform:none; font-weight: normal; line-height: 16px;">Нажимая данную кнопку я подтверждаю, что ознакомился с
+				<a href="http://vkcomfort.ru/shared/files/3016ab41409b4bada6476268b8651567.pdf" style="color: #fff" target="blank">Политикой в отношении обработки и защиты персональных данных собственников и пользователей
+				помещений в многоквартирных домах АО "ВК Комфорт"</a> и  даю АО «ВК Комфорт» свое согласие на обработку моих персональных данных".
+				</label>
+				</i>
+				</div>
+
+				<input type="hidden" name="tokencf" value="7a91e9bda5fd6347c0d13eac323ec7f9f3c28ccc" />
+			</form>
+		</div>
+
+		<!--  -->
+		<div id="footerPaymo">
+		<div>
+		<h3>Оплатить ЖКУ</h3><span style="display: none" id="closeFooterPaymo">x</span>
+		</div>
+		<br /><br />
+		<table style="border: none;">
+		<tr><td>
+		<form action="" id="paymoFooterForm">
+		<div style="padding-top: 16px">
+		<input type="text" class="paymo-text" name="account" autocomplete="off" placeholder="Лицевой счет" />
+		<br />
+		<input type="text" class="paymo-text" name="amount" autocomplete="off" placeholder="0.00" />
+		<br />
+		<input name="email" class="paymo-text" placeholder="Email" autocomplete="off" autocomplete="off" type="text">
+		<br>
+		<input name="ins-footer" type="checkbox" checked id="ins-footer"><label for="ins-footer">Со страховкой</label>
+		<br /><br />
+
+		<div>С учетом комиссии: <span id="paymoFooterTotal">0.00</span> руб.</div>
+		<br />
+		<input type="submit" id="footerPaymoButton" value="Оплатить">
+		</form>
+		</td></tr>
+		</table>
+
+				<div id="paymoFooterContainer"></div>
+		</div>
+		<!--  -->
+
+
+		</div>
+
+	</div>
+	<footer id="footer">
+		<div class="container">
+
+			<div class="footer_text">
+				<p>
+				2010-2018. АО «ВК Комфорт» <br>Все права защищены</p>
+				<p>
+					107078, Россия, г. Москва, <br>ул. Новорязанская, д.18, стр.21.<br>тел. 8 (495) 737-77-40, <a href="mailto:office@vkcomfort.ru">office@vkcomfort.ru</a>
+				</p>
+			</div>
+			<a href="https://goo.gl/7hgUSX"><img src="/assets/images/mp/gp.png" style="margin-left: 50px;" class="mp-badge"></a>
+			<a href="https://goo.gl/KaLHxc"><img src="/assets/images/mp/appstore.png" style="margin-left: 10px;" class="mp-badge"></a>
+			<div>
+            <a href="https://www.facebook.com/VKComfort?ref=hl"><img src="http://vk.loc/assets/images/icons/facebook.png" style="padding: 20px 10px 10px 50px;"></a>
+            <a href="https://www.linkedin.com/company/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%D1%89%D0%B0%D1%8F-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B0%D0%BE-%D0%B2%D0%BA-%D0%BA%D0%BE%D0%BC%D1%84%D0%BE%D1%80%D1%82-?trk=top_nav_home"><img src="http://vk.loc/assets/images/icons/linkedIn.png" style="padding: 20px 10px 10px 10px;"></a>
+            <a href="https://ok.ru/group/54174826758382"><img src="http://vk.loc/assets/images/icons/ok.png" style="padding: 20px 10px 10px 10px;"></a>
+            <a href="https://twitter.com/VKComfort"><img src="http://vk.loc/assets/images/icons/twitter.png" style="padding: 20px 10px 10px 10px;"></a>
+            <a href="https://vk.com/public126336027"><img src="http://vk.loc/assets/images/icons/vk.png" style="padding: 20px 10px 10px 10px;"></a>
+			<!-- <a href="http://vk.loc/" class="footer_logo"></a>-->
+			<a href="http://vkcomfort.ru/rss/" class="footer_logo" style="background: none;margin-top:20px;text-align:right;">
+            <i class="fa fa-rss" aria-hidden="true" style="font-size: 40px;"></i>
+            </a>
+            </div>
+
+		</div>
+	</footer><!--/footer-->
+
+</div><!--/wrapper -->
+
+<!-- GoogleAnalytics start -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-29053279-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+<!-- GoogleAnalytics end -->
+
+
+
+	 <script src="http://vk.loc//assets/js/backstage/vendor/chosen/chosen.jquery.min.js"></script>
+     <script src="http://vk.loc//assets/js/backstage/vendor/chosen/chosen.init.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	$(".footer_contact_form").on("submit", function() {
+		if(! $("#agree").is(":checked")) {
+			alert("Вы должны подтвердить, что даете свое согласие на обработку своих персональных данных");
+			return false;
+		}
+	});
+});
+</script>
+
+
+</body>
+</html>

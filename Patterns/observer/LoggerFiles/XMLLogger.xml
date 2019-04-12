@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<logs>
+  <messages>
+    <message>Message - 1</message>
+    <date>[2018-11-27 11:39:11] </date>
+  </messages>
+  <messages>
+    <message>Message - 2</message>
+    <date>[2018-11-27 11:39:11] </date>
+  </messages>
+<messages><message>Message - 1</message><date>[2018-11-27 12:06:45] </date></messages><messages><message>Message - 2</message><date>[2018-11-27 12:06:45] </date></messages><messages><message>Message - 1</message><date>[2018-11-27 12:07:08] </date></messages><messages><message>Message - 2</message><date>[2018-11-27 12:07:08] </date></messages><messages><message>Message - 1</message><date>[2018-11-27 12:07:56] </date></messages><messages><message>Message - 2</message><date>[2018-11-27 12:07:56] </date></messages><messages><message>Message - 1</message><date>[2018-11-27 12:10:57] </date></messages><messages><message>Message - 2</message><date>[2018-11-27 12:10:57] </date></messages></logs>

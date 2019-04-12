@@ -1,0 +1,7 @@
+.chosen-container .chosen-results {
+    font-weight: normal;
+}
+
+.chosen-container .chosen-results li:before {
+    content: none;
+}

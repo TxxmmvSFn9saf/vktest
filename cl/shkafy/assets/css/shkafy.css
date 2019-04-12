@@ -1,0 +1,373 @@
+body, html{
+	overflow-x: hidden;
+}
+.b-bg-1{
+	background: url('../../../../../vediscomfort.myjino.ru/assets/images/kl/shkafy/bg1.jpg') no-repeat 50% 0;
+}
+.b-bg-2{
+	background: url('../../../../../vediscomfort.myjino.ru/assets/images/kl/shkafy/bg2.jpg') no-repeat center center;
+	background-size: cover;
+	
+}
+.b-bg-3{
+	background: url('../../../../../vediscomfort.myjino.ru/assets/images/kl/shkafy/bg3.jpg') no-repeat center center;
+	background-size: cover;
+}
+.b-block-inner{
+	background: rgba(44, 147, 207, 0.7);
+}
+.b-block-inner.b-white-bg{
+	background: rgba(255, 255, 255, 0);
+}
+.b-first-block .b-block-inner{
+	padding: 595px 0 0;
+}
+h1.b-title{
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 0 33px 0;
+}
+.b-first-block-form{
+	padding: 30px 15px;
+	width: 80%;
+	margin: 0 auto;
+	background: rgba(44, 147, 207, 0.9);
+}
+.b-first-block .b-block-content{
+	padding-top: 30px;
+	background: rgba(44, 147, 207, 1);
+}
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.b-first-block-form .b-flex{
+	margin: 0 -5px;
+}
+.b-first-block-form .b-flex .b-form-element{
+	width: 33%;
+	float: left;
+	padding: 0 5px;
+}
+.b-first-block-form .b-flex .b-form-element:nth-child(1){
+	width: 25%;
+}
+.b-first-block-form .b-flex .b-form-element:nth-child(2){
+	width: 25%;
+}
+.b-first-block-form .b-flex .b-form-element:nth-child(3){
+	width: 50%;
+}
+.b-form-element input{
+	width: 100%;
+	margin: 0;
+	padding: 7px;
+}
+.b-form-element input.b-form-submit{
+	background-color: #ec6400;
+	border: none;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 7px;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.b-form-element input.b-form-submit:hover{
+	opacity: 0.93;
+}
+.b-first-block-form .b-form-title{
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.b-agree{
+	text-align: right;
+	color: #fff;
+	font-size: 12px;
+	margin-top:10px;
+}
+.b-agree label{
+	font-weight: normal;
+}
+.b-preim{
+	margin: 50px -5px;
+}
+.b-preim .b-preim-wrap{
+	
+}
+.b-preim .b-preim-element{
+	width: 49.6%;
+	align-items: center;
+	padding: 0 5px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.b-preim .b-preim-element .b-left{
+	color: #ccc;
+	font-size: 44px;
+	display: inline-block;
+	width: 13%;
+	vertical-align: middle;
+}
+.b-preim .b-preim-element .b-right{
+	text-transform: uppercase;
+	color: #ec6400;
+	font-weight: bold;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 84%;
+}
+.b-block-title{
+	font-size: 26px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.b-uslugi .b-block-inner{
+	padding: 30px 0;
+}
+.b-uslugi-descr{
+	text-align: left;
+	margin: 15px 0;
+}
+.b-uslugi-descr b{
+	font-weight: bold;
+}
+.b-uslugi-descr2{
+	font-weight: bold;
+	margin-top: 15px;
+}
+.img-responsive{
+	max-width: 100%;
+	height: auto;
+}
+.b-uslugi-list{
+	flex-wrap: wrap;
+	padding: 0 10px;
+}
+.b-uslugi-list .b-uslugi-element{
+	width: 50%;
+	float: left;
+	padding: 0 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.b-uslugi-list .b-uslugi-element .b-uslugi-element-img{
+	margin-bottom: 15px;
+}
+.b-uslugi-list .b-uslugi-element .b-title{
+	text-transform: uppercase;
+	color: #ec6400;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.b-uslugi-list .b-uslugi-element .b-price{
+	font-size: 20px;
+	font-weight: bold;
+	margin: 25px 0;
+}
+.b-uslugi-list .b-uslugi-element .b-uslugi-element-inner{
+	background: rgba(255,255,255,0.92);
+	padding: 10px 20px 20px;
+	height: 100%;
+}
+.b-button button{
+	background-color: #ec6400;
+	border: none;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 8px;
+	width: 100%;
+	max-width: 200px;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.b-button button:hover{
+	opacity: 0.8;
+}
+.b-raboty{
+	margin: 50px 0;
+}
+.b-raboty .b-title{
+	margin-bottom: 23px;
+	font-size: 26px;
+	color: #2c93cf;
+	text-transform: uppercase;
+	text-align: center;
+}
+.b-kak-rabotaem .b-block-inner{
+	padding: 50px 100px;
+}
+.b-two-blocks{
+	align-items: center;
+	flex-wrap: wrap;
+}
+.b-two-blocks .b-arrow-right{
+	width: 10%;
+	text-align: center;
+	padding: 0 5px;
+	float: left;
+	margin-top: 60px;
+}
+.b-how-element{
+	background: #fff;
+	padding: 10px 20px;
+	width: 45%;
+	height: 100%;
+	min-height: 140px;
+	float: left;
+}
+.b-how-element .b-left{
+	font-size: 24px;
+	padding-right: 10px;
+	color: #ec6400;
+	border-right: 1px solid #ec6400;
+	display: inline-block;
+	width: 10%;
+	vertical-align: top;
+}
+.b-how-element .b-right{
+	padding-left: 10px;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 85%;
+	vertical-align: top;
+}
+.b-how-element .b-right span{
+	text-transform: none;
+}
+.b-2-3-arrow{
+	text-align: center;
+	margin: 20px 0;
+}
+.b-bottom-form{
+	margin: 50px auto 50px;
+	width: 80%;
+}
+.b-bottom-form .b-form-title{
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+.b-politics-descr{
+	margin: 50px 0 0;
+}
+.b-bottom-form .b-form-element{
+	padding: 0 5px;
+	float: left;
+}
+.b-bottom-form .b-form-element:nth-child(1){
+	width: 25%
+}
+.b-bottom-form .b-form-element:nth-child(2){
+	width: 25%
+}
+.b-bottom-form .b-form-element:nth-child(3){
+	width: 50%
+}
+.b-bottom-form .b-flex{
+	flex-wrap: wrap;
+}
+.b-bottom-form .b-agree{
+	color: #000;
+}
+.b-arrow-down{
+	display: none;
+}
+.remodal{
+	width: 100%;
+	max-width: 500px;
+}
+.b-subtitle{
+	text-align: center;
+	color: #fff;
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+@media (max-width: 991px){
+	
+}
+@media (max-width: 767px){
+	.b-first-block-form .b-flex .b-form-element{
+		width: 100% !important;
+		margin-bottom: 5px;
+	}
+	.b-form-element input.b-form-submit{
+		text-transform: none;
+		font-size: 12px;
+	}
+	.b-agree{
+		padding: 0;
+	}
+	.b-preim .b-preim-element{
+		width: 100%;
+	}
+	.b-uslugi-list .b-uslugi-element{
+		width: 100%;
+	}
+	.b-raboty .b-title,
+	.b-block-title{
+		font-size: 22px;
+	}
+	.b-kak-rabotaem .b-block-inner{
+		padding: 50px 10px;
+	}
+	.b-how-element{
+		width: 100%;
+	}
+	.b-arrow-right,
+	.b-2-3-arrow{
+		display: none;
+	}
+	.b-arrow-down{
+		display: block;
+		text-align: center;
+		margin: 15px auto;
+		padding-top: 15px;
+	}
+	h1.b-title{
+		font-size: 24px;
+	}
+	.b-bottom-form .b-form-element{
+		width: 100% !important;
+		margin-bottom: 5px;
+	}
+	.remodal{
+		width: 100%;
+	}
+	.kl-agree{
+		margin: 10px 0;
+		text-align: center;
+		padding: 0;
+	}
+	#b-popup-form input{
+		width: 100% !important;
+	}
+	#b-popup-form .kl-button{
+		width: 100% !important;
+		margin-top: 15px;
+	}
+	.hidden-xs{
+		display: none !important;
+	}
+}

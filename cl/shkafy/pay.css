@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+
+div.error {
+	width: 350px;
+	margin: auto;
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+#paymoWinTitle {
+	font-size: 24px;
+	line-height: 1;
+	text-transform: uppercase;
+	display: block;
+	margin: -1px 0 0 0;
+	margin-bottom: 20px;
+	display: none;
+}
+
+#paymoWinFormTitle {
+	font-size: 24px;
+	line-height: 1;
+	text-transform: uppercase;
+	display: block;
+	margin: -1px 0 0 0;
+}
+
+#paymoWinBtn {
+	border-radius: 10px;
+	height: 40px;
+	width: 300px;
+	border: none;
+	background: #71a0cb;
+	text-transform: uppercase;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#footerPaymoButton {
+	border-radius: 10px;
+	height: 40px;
+	width: 300px;
+	border: none;
+	background: #71a0cb;
+	text-transform: uppercase;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#footerPaymo h3 {
+	font-size: 30px;
+	line-height: 1;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+	margin: -1px 0 0 0;
+}
+
+input.paymo-text {
+	border-radius: 10px;
+}
+
+#footerPaymo div.error {
+	color: #fff;
+}
+
+#closeFooterPaymo {
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 30px;
+	cursor: pointer;
+}

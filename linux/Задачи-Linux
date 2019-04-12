@@ -1,0 +1,87 @@
+//1-Задача
+//Надо найти все файлы *.jpg и переместить в папку ~/images
+find . -type f -iname '*.jpg' -exec mv {} /root/images \;
+........................................................................................................................
+//2-Задача
+//как найти файлы image_1.jpg image_2.jpg и переименовать их, обрезав "image_"
+find . -type f -name '*.jpg' | sed 'p;s:image_::g' | xargs -n2 mv
+........................................................................................................................
+//3-Задача
+//перекинуть файлы с windows на linux (через pscp)
+1. входим в cmd
+2. пропишем путь к pscp -> "C:\Program Files\PuTTY\pscp.exe" -scp file.py server.com
+3. загружаем  -> pscp -r C:\Users\simonyan.a\Desktop\testfolder artur@10.70.10.53:/home/artur/www/vkcomfort/htdocs
+........................................................................................................................
+//4-задача
+//выбор действия Yes\No
+#!/bin/bash
+
+echo "Do you wish to install this program?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) make install; break;;
+        No ) exit;;
+    esac
+done
+........................................................................................................................
+//5-задача
+//ввод переменной
+#!/bin/bash
+
+read -p "Enter..." x
+echo "$x"
+........................................................................................................................
+//6-задача
+//Цыклы
+#!/bin/bash
+
+echo "While"
+count=0
+while [ $count -lt 10 ]; do
+echo "$count"
+let count+=1
+done
+
+echo "For"
+for x in {1..10}; do
+echo "$x"
+done
+
+echo "Classic For"
+for (( i=1; i<=10; i++)); do
+echo "$i"
+done
+........................................................................................................................
+//6-задача
+//Фунции
+#!/bin/bash
+
+func()
+{
+echo "name:$1"
+}
+
+func artur
+........................................................................................................................
+//7-задача
+//Tar
+tar -cvf abc.tar
+........................................................................................................................
+//tar
+ tar -cf /home/artur/www/vkcomfort/htdocs/backup/backup.tar /home/artur/www/vkcomfort/htdocs/app /home/artur/www/vkcomfort/htdocs/core /home/artur/www/vkcomfort/htdocs/rss /home/artur/www/vkcomfort/htdocs/templates
+//8-задача
+//создать бэкап  файлов и базы
+#!/bin/bash
+
+DATE=`date +%Y-%m-%d`
+
+tar -zcvf  /home/artur/www/vkcomfort/backup/backup-$DATE.tar.gz /home/artur/www/vkcomfort/htdocs/app /home/artur/www/vkcomfort/htdocs/core /home/artur/www/vkcomfort/htdocs/rss /home/artur/www/vkcomfort/htdocs/templates
+mysqldump -uroot -p1qaz2wsx  vediscomfort_newvk  > /home/artur/www/vkcomfort/backup/db_backup_$DATE.sql
+find /home/artur/www/vkcomfort/backup -type f -name '*.tar.gz' -mtime +7 -exec rm {} \;
+find /home/artur/www/vkcomfort/backup -type f -name '*.sql' -mtime +7 -exec rm {} \;
+(можно записать user и password в my.cnf)
+//9-задача
+//crontab
+(Если используем в кронтабе файл то надо дать файлу доступ ->  chmod +x home/hacks/notify.sh)
+00 00 * * * /home/artur/www/vkcomfort/backup/backup.sh
+

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<logs>
+  <messages>
+    <message>Test info message</message>
+    <date>[2018-11-30 10:31:11] </date>
+  </messages>
+  <messages>
+    <message>Test debug message</message>
+    <date>[2018-11-30 10:31:11] </date>
+  </messages>
+  <messages>
+    <message>Test error message</message>
+    <date>[2018-11-30 10:31:11] </date>
+  </messages>
+</logs>
